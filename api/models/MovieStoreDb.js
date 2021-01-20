@@ -32,7 +32,7 @@ module.exports = {
       example: 2000,
       description: 'to know the year it was released'
     },
-    Rating: {
+    rating: {
       type: 'number',
       example: 4,
       description: 'To know how much people loved the movie'

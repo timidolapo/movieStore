@@ -63,4 +63,10 @@ module.exports.routes = {
   'POST  /api/v1/deliver-contact-form-message':          { action: 'deliver-contact-form-message' },
   'POST  /api/v1/observe-my-session':                 { action: 'observe-my-session', hasSocketFeatures: true },
 
+  //movie EndPoint
+  'POST /api/v1/movie/add-movie': { action: 'movie/add-movie' },
+  //list-movie endpoint
+  'POST /api/v1/movie/list-movie': { action: 'movie/list-movie' },
+  //search-movie endpoint
+  'GET /api/v1/movie/search-movie': { action: 'movie/search-movie'},
 };
