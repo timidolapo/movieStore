@@ -43,7 +43,7 @@ module.exports = {
 
 
   fn: async function (inputs) {
-    var newMovie = await Movies.create({
+    var newMovie = await Movie.create({
       movieTitle: inputs.movieTitle,
       genre: inputs.genre,
       yearOfRelease: inputs.yearOfRelease,

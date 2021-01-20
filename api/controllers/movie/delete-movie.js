@@ -1,5 +1,3 @@
-const Movies = require("../../models/Movies");
-
 module.exports = {
 
 
@@ -10,30 +8,11 @@ module.exports = {
 
 
   inputs: {
-    movieTitle:{
-      type: 'string',
-      required: true,
-      maxLength: 500,
-      example: 'durh hurh fihbwhs',
-      description: 'This would be the movie title'
-
-    },
-    genre:{
-      type: 'string',
-      maxLength: 500,
-      example: 'comedy-horror',
-      description: 'To know the type of movie this is'
-
-    },
-    yearOfRelease:{
-      type: 'number',
-      example: 2000,
-      description: 'to know the year it was released'
-    },
-    rating: {
+    id:{
       type: 'number',
       example: 4,
-      description: 'To know how much people loved the movie'
+      description: "The unique code for each movie"
+
     }
 
   },
@@ -45,11 +24,7 @@ module.exports = {
 
 
   fn: async function (inputs) {
-
-    var deleteMovie = await Movies.destroyOne({
-
-    }).fetch()
-
+    var deleteMovie = await Movie.isdeleted
     // All done.
     return;
 

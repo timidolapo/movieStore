@@ -1,4 +1,4 @@
-const MovieStoreDb = require("../../models/MovieStoreDb");
+
 
 module.exports = {
 
@@ -12,7 +12,6 @@ module.exports = {
   inputs: {
     movieTitle:{
       type: 'string',
-      required: true,
       maxLength: 500,
       example: 'durh hurh fihbwhs',
       description: 'This would be the movie title'
@@ -28,9 +27,11 @@ module.exports = {
 
 
   fn: async function (inputs) {
-    var searchMovie = await MovieStoreDb.
+    var searchMovie = await Movie.find({
+      movieTitle: {'contains' : inputs.movieTitle}
+    });
     // All done.
-    return;
+    return(searchMovie);
 
   }
 

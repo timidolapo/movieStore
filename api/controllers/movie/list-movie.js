@@ -20,7 +20,7 @@ module.exports = {
 
 
   fn: async function () {
-    var movieList = await Movies.find()
+    var movieList = await Movie.find()
     // All done.
     return(movieList);
 

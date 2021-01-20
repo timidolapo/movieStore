@@ -23,7 +23,7 @@ module.exports = {
 
   fn: async function (inputs) {
     console.log(inputs);
-    var viewMovie = await Movies.findOne({id: inputs.id}).where({id: inputs.id});
+    var viewMovie = await Movie.findOne().where({id: inputs.id});
     // All done.
     return(viewMovie);
 

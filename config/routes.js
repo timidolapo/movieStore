@@ -71,4 +71,6 @@ module.exports.routes = {
   'GET /api/v1/movie/search-movie': { action: 'movie/search-movie'},
   //view a movie enpoint
   'GET /api/v1/movie/single-movie': { action: 'movie/single-movie' },
+  //to delete a movie endpoint
+  'DELETE /api/v1/movie/delete-movie': { action: 'movie/delete-movie' },
 };
