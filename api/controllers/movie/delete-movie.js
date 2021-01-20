@@ -24,9 +24,11 @@ module.exports = {
 
 
   fn: async function (inputs) {
-    var deleteMovie = await Movie.isdeleted
+    var deleteMovie = await Movie.destroyOne(
+      {id: inputs.id}
+    )
     // All done.
-    return;
+    return(deleteMovie);
 
   }
 
