@@ -66,7 +66,9 @@ module.exports.routes = {
   //movie EndPoint
   'POST /api/v1/movie/add-movie': { action: 'movie/add-movie' },
   //list-movie endpoint
-  'POST /api/v1/movie/list-movie': { action: 'movie/list-movie' },
+  'GET /api/v1/movie/list-movie': { action: 'movie/list-movie' },
   //search-movie endpoint
   'GET /api/v1/movie/search-movie': { action: 'movie/search-movie'},
+  //view a movie enpoint
+  'GET /api/v1/movie/single-movie': { action: 'movie/single-movie' },
 };
